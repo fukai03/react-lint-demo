@@ -199,7 +199,7 @@ yarn add lint-staged -D
 pnpm add --save-dev @commitlint/{cli,config-conventional}
 ```
 
-- 根路径新建 commitlint.config.js 文件并配置
+- 根路径新建 commitlint.config.js 文件并配置。[参考](https://github.com/conventional-changelog/commitlint/blob/master/%40commitlint/config-conventional/index.js)
 
 ```js
 module.exports = {
@@ -343,3 +343,6 @@ git commit -m "feat: init husky"
 ```
 
 ![correct commit](./src/assets/images/husky-correct.png)
+
+- 若提交文件中包含 ESLint 和 Prettier 所检测的文件，则会通过 lint-staged 对提交的文件进行校验，检测其内容是否符合 lint 规则
+  ![lint-staged](./src/assets/images/commit-lint-file.png)
